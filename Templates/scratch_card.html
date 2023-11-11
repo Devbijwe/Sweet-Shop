@@ -81,7 +81,7 @@
 <body style="background-color: rgba(0, 0, 0, 0.2);">
     <canvas id="fireworks-canvas"></canvas>
     <br><br><br><br><br><br>
-    <h2 id="remaining-time">Remaining Time: Loading...</h2>
+    <h2 id="remaining-time" style="z-index: 50;">Remaining Time: Loading...</h2>
     <div id="scratchCard2" class="scratchCard" style="height: 415px;"></div>
 
     <pre id="output"></pre>
@@ -102,18 +102,30 @@
                         var remainingTime = data.remaining_time;
                         var minutes = Math.floor(remainingTime / 60);
                         var seconds = remainingTime % 60;
-                        document.getElementById('remaining-time').textContent = 'Remaining Time: ' + minutes + ' min ' + seconds + ' sec';
-                   } else {
+                        var remainingTimeText = 'Remaining Time: ' + minutes + ' min ' + seconds + ' sec';
+
+                        // Check if time is still ticking
+                        if (remainingTime > 0) {
+                            document.getElementById('remaining-time').style.color = 'green';
+                        } else {
+                            // Time has expired
+                            document.getElementById('remaining-time').style.color = 'red';
+                            remainingTimeText = 'Invalid or expired scratch card.';
+                        }
+
+                        document.getElementById('remaining-time').textContent = remainingTimeText;
+                    } else {
                         console.error('Invalid or expired token.');
-                   
-                        document.getElementById('remaining-time').textContent = 'Invalid or expired scratch Card.';
-                
-                        
+
+                        // Set text to indicate an invalid or expired scratch card
+                        document.getElementById('remaining-time').textContent = 'Invalid or expired scratch card.';
+                        document.getElementById('remaining-time').style.color = 'red';
                     }
                 })
-                .catch(error => {
-                    console.error('Error fetching remaining time:', error);
-                });
+
+            .catch(error => {
+                console.error('Error fetching remaining time:', error);
+            });
         }
 
         // Run the update function periodically

@@ -21,8 +21,7 @@ def login():
     return render_template('login.html')
 
 @app.route('/events/diwali_offer')
-# @ip_rate_limit(limit=3, per=timedelta(days=1))
-
+@ip_rate_limit(limit=3, per=timedelta(days=1))
 def scratch():
      # Generate a unique token for this session
     token, expiration_time = generate_token()

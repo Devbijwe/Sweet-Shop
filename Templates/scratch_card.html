@@ -81,11 +81,18 @@
 <body style="background-color: rgba(0, 0, 0, 0.2);">
     <canvas id="fireworks-canvas"></canvas>
     <br><br><br><br><br><br>
-    <h2 id="remaining-time" style="z-index: 50;">Remaining Time: Loading...</h2>
+    <h2 id="remaining-time" class="" style="text-align: center;z-index: 50;">Remaining Time: Loading...</h2>
     <div id="scratchCard2" class="scratchCard" style="height: 415px;"></div>
 
     <pre id="output"></pre>
     <script type="text/javascript">
+        // Check the screen width
+        if (window.innerWidth >= 1024) { // You can adjust the width threshold as needed
+            // Redirect to the home page
+            window.location.href = "{{ url_for('home') }}";
+        }
+
+
         function updateRemainingTime() {
             fetch('/get_remaining_time', {
                     method: 'POST',

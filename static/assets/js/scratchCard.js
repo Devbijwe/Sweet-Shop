@@ -306,9 +306,25 @@ class Particle {
 const fireworks = [new Firework()];
 const particles = [];
 
+// Create an audio element
+const audio = new Audio('/static/assets/music/firework-1-29803.mp3');
+audio.loop = true; // Set the audio to loop
+
+function playAudio() {
+    audio.play().catch(error => {
+        console.error('Error playing audio:', error);
+    });
+}
+
+function stopAudio() {
+    audio.pause();
+    audio.currentTime = 0;
+}
+
+
 function animate() {
 
-
+    playAudio();
     ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 

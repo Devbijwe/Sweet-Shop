@@ -32,9 +32,10 @@ def scratch():
     return redirect(token_url)
    
 
-@app.route('/events/diwali_offer/<token>')
-def scratch_with_token(token):
+@app.route('/s/events/diwali_offer')
+def scratch_with_token():
     # Check if the token is valid and has not expired
+    token=request.args.get("token")
     if is_valid_token(token):
         original_price = 100  # Replace this with the price you want to apply discounts to
         max_discount_percent = 20  # Set the maximum discount percentage

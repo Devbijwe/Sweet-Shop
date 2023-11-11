@@ -118,7 +118,7 @@
                         console.error('Invalid or expired token.');
 
                         // Set text to indicate an invalid or expired scratch card
-                        document.getElementById('remaining-time').textContent = 'Invalid or expired scratch card.';
+                        document.getElementById('remaining-time').textContent = 'Scratch card Expired.';
                         document.getElementById('remaining-time').style.color = 'red';
                     }
                 })
@@ -157,10 +157,10 @@
                 backgroundColor: '#95a5a6',
                 tipsColor: '#fff',
                 tips: 'Scratch here to win',
-                showButton: false,
-                btnContent: 'Claim your Reward',
+                showButton: true,
+                btnContent: "Don't worry we have lot more for you...",
                 btnCallback: function() {
-                    alert('Prize claimed!')
+                    window.location.href = "/";
                 },
                 prompt: '{{scratch_text}}',
             });

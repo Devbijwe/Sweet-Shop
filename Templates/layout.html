@@ -89,7 +89,19 @@
 
         </div>
     </header>
+    <div class="search-container" data-search-container>
 
+        <div class="search-box">
+            <input type="search" name="search" aria-label="Search here" placeholder="Type keywords here..." class="search-input">
+
+            <button class="search-submit" aria-label="Submit search" data-search-submit-btn>
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+
+        <button class="search-close-btn" aria-label="Cancel search" data-search-close-btn></button>
+
+    </div>
 
     {% block main %} {% endblock %}
 
@@ -99,7 +111,7 @@
     - #FOOTER
   -->
 
-    <footer id="footer" class="footer">
+    <!-- <footer id="footer" class="footer">
 
         <div class="footer-top" style="background-image: url('{{url_for('static',filename='assets/images/footer-illustration.png')}}')">
             <div class="container">
@@ -190,8 +202,101 @@
             </div>
         </div>
 
-    </footer>
+    </footer> -->
 
+    <footer id="footer" class="footer">
+
+        <div class="footer-top" style="background-image: url('{{url_for('static',filename='assets/images/footer-illustration.png')}}')">
+            <div class="container">
+
+                <div class="footer-brand">
+
+                    <a href="" class="logo">
+                        <img src="{{url_for('static',filename='assets/images/logo.svg')}}" alt="">
+                    </a>
+
+                    <p class="footer-text">
+                        Explore the essence of Satkar Sweets & Namkeen, where the richness of Indian culture, traditions, and delightful flavors unite! Our passion for crafting extraordinary sweets and namkeens takes you on a flavorful journey beyond the ordinary.
+                    </p>
+
+                    <ul class="social-list">
+
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=61552397490396" class="social-link">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/satkar.namkeen/" class="social-link">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-pinterest"></ion-icon>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title">Contact Us</p>
+                    </li>
+
+                    <li>
+                        <p class="footer-list-item"><a href="tel:+919209259249" class="footer-link">+91 9209259249 </a></p>
+                        <p class="footer-list-item"><a href="tel:+917447267924" class="footer-link">+91 7447267924 </a></p>
+                    </li>
+
+                    <li>
+                        <p class="footer-list-item"><a href="mailto:support@satkarnamkeen.com" class="footer-link">support@satkarnamkeen.com</a></p>
+                    </li>
+
+                    <li>
+                        <address class="footer-list-item">Shop no 3, ground floor, Civil Line, Yavatmal</address>
+                    </li>
+
+                </ul>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title">Opening Hours</p>
+                    </li>
+
+                    <li>
+                        <p class="footer-list-item">Monday-Sunday: 09:00 AM - 09:30 PM</p>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright-text">
+                    &copy;
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script> <a href="#" class="copyright-link">Satkar Sweets & Namkeen |</a> All Rights Reserved.
+                </p>
+            </div>
+        </div>
+
+    </footer>
 
 
 

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body {
+            position: relative;
+        }
+        
+        .scratchCard {
+            position: relative;
+            width: 85.6%;
+            height: 415px;
+            /* Increase the height here */
+            margin: -5px auto;
+            background: url(/static/assets/scratch/scratch_canvas.png) no-repeat center center;
+            background-size: 100% 100%;
+        }
+        
+        .scratchCard .scratchCardCanvas {
+            position: absolute;
+            top: 2px;
+            left: 2.5%;
+            width: 95%;
+            height: 400px;
+            /* Adjusted height */
+            line-height: 112px;
+            /* Adjusted line-height */
+            text-align: center;
+            z-index: 2;
+        }
+        
+        .scratchCard .info {
+            position: absolute;
+            top: 2px;
+            left: 2.5%;
+            width: 95%;
+            height: 112px;
+            /* Adjusted height */
+            text-align: center;
+        }
+        
+        .scratchCard .info span {
+            display: block;
+            font-size: 18px;
+        }
+        
+        .scratchCard .info span.prompt {
+            margin-top: 60px;
+            font-weight: bold;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .scratchCard .info span.btn {
+            position: relative;
+            width: 50%;
+            height: 40px;
+            vertical-align: baseline;
+            /* Adjusted height */
+            line-height: 40px;
+            /* Adjusted line-height */
+            background: #df412b;
+            color: #fff;
+            border-radius: 5px;
+            margin: 0 auto;
+            z-index: 1;
+        }
+        
+        canvas#fireworks-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgba(0, 0, 0, 0.2);">
+    <canvas id="fireworks-canvas"></canvas>
+    <br><br><br><br><br><br>
+    <h2 id="remaining-time">Remaining Time: Loading...</h2>
+    <div id="scratchCard2" class="scratchCard" style="height: 415px;"></div>
+
+    <pre id="output"></pre>
+    <script type="text/javascript">
+        function updateRemainingTime() {
+            fetch('/get_remaining_time', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        token: '{{token}}' // Replace with the actual token
+                    }),
+                }) // Replace with the actual token
+                .then(response => response.json())
+                .then(data => {
+                    if ('remaining_time' in data) {
+                        var remainingTime = data.remaining_time;
+                        var minutes = Math.floor(remainingTime / 60);
+                        var seconds = remainingTime % 60;
+                        document.getElementById('remaining-time').textContent = 'Remaining Time: ' + minutes + ' min ' + seconds + ' sec';
+                   } else {
+                        console.error('Invalid or expired token.');
+                   
+                        document.getElementById('remaining-time').textContent = 'Invalid or expired scratch Card.';
+                
+                        
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching remaining time:', error);
+                });
+        }
+
+        // Run the update function periodically
+        setInterval(updateRemainingTime, 1000);
+    </script>
+
+    <script src="{{ url_for('static', filename='assets/js/jquery-1.8.3.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/scratchCard.js') }}"></script>
+    {% if discount_percent %}
+    <script>
+        $(document).ready(function() {
+            $("#scratchCard2").scratchCard({
+                backgroundColor: '#95a5a6',
+                tipsColor: '#fff',
+                tips: 'Scratch here to win',
+                showButton: true,
+                btnContent: 'Claim your Reward',
+                btnCallback: function() {
+                    alert('Prize claimed!')
+                },
+                prompt: '{{scratch_text}}',
+            });
+        });
+    </script>
+    {% else %}
+    <script>
+        $(document).ready(function() {
+            $("#scratchCard2").scratchCard({
+                backgroundColor: '#95a5a6',
+                tipsColor: '#fff',
+                tips: 'Scratch here to win',
+                showButton: false,
+                btnContent: 'Claim your Reward',
+                btnCallback: function() {
+                    alert('Prize claimed!')
+                },
+                prompt: '{{scratch_text}}',
+            });
+        });
+    </script>
+    {% endif %}
+    <script>
+        var isReloading = true;
+
+        document.onkeydown = (e) => {
+            if (e.ctrlKey) {
+                e.preventDefault();
+            } else if (e.key == 'U' && e.ctrlKey) {
+                e.preventDefault(); // Prevent Ctrl+U
+            } else if (e.key == 'R' && e.ctrlKey) {
+                e.preventDefault(); // Prevent Ctrl+R
+            } else if (e.key == 'I' && e.ctrlKey) {
+                e.preventDefault(); // Prevent Ctrl+I (Developer Console in some browsers)
+            } else if (e.key == 'J' && e.ctrlKey) {
+                e.preventDefault(); // Prevent Ctrl+J (Developer Console in some browsers)
+            } else if (e.key == 'C' && e.ctrlKey) {
+                e.preventDefault(); // Prevent Ctrl+C (Developer Console in some browsers)
+            } else {
+                e.preventDefault(); // Prevent default action for all other keys
+            }
+        };
+
+        document.addEventListener('contextmenu', (e) => {
+            isReloading = false;
+            window.location.href = "/";
+        });
+
+        document.onmousedown = () => {
+            // Allow mouse click events
+            document.onkeydown = null; // Remove the keydown event handler once a click occurs
+        };
+
+        document.ontouchstart = () => {
+            // Allow touch events
+            document.onkeydown = null; // Remove the keydown event handler once a touch occurs
+        };
+
+        window.addEventListener('beforeunload', function(e) {
+            if (isReloading) {
+                var confirmationMessage = "You have unsaved changes. Leaving now may result in losing your chance for the daily scratch card quota. Are you sure you want to leave?";
+                e.returnValue = confirmationMessage; // Standard for most browsers
+                return confirmationMessage; // For some older browsers
+            }
+        });
+    </script>
+
+</body>
+
+</html>

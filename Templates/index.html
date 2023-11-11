@@ -1,0 +1,614 @@
+ {% extends "layout.html" %} {% block main %}
+<!-- 
+    - #SEARCH BOX
+  -->
+
+<div class="search-container" data-search-container>
+
+    <div class="search-box">
+        <input type="search" name="search" aria-label="Search here" placeholder="Type keywords here..." class="search-input">
+
+        <button class="search-submit" aria-label="Submit search" data-search-submit-btn>
+        <ion-icon name="search-outline"></ion-icon>
+      </button>
+    </div>
+
+    <button class="search-close-btn" aria-label="Cancel search" data-search-close-btn></button>
+
+</div>
+
+
+<main>
+    <article>
+        <div class="container-fluid p-0">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="/events/diwali_offer">
+                            <img id="b1" src="{{url_for('static',filename='assets/images/b-1.png')}}" class="d-block w-100" alt="...">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <img id="b2" src="{{url_for('static',filename='assets/images/b-2.png')}}" class="d-block w-100" alt="...">
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+            </div>
+
+        </div>
+
+        <section class="section section-divider white promo">
+            <div class="container">
+
+                <ul class="promo-list has-scrollbar">
+
+                    <li class="promo-item">
+                        <div class="promo-card">
+
+                            <div class="card-icon">
+                                <svg id="fi_7843315" height="60" viewBox="0 0 64 64" width="60" xmlns="http://www.w3.org/2000/svg" data-name="Layer 3">
+                <g fill="#ff9d2d">
+                <path d="m32 1a31 31 0 1 0 31 31 31.035 31.035 0 0 0 -31-31zm0 60a29 29 0 1 1 29-29 29.033 29.033 0 0 1 -29 29z"></path><path d="m32 5a27 27 0 1 0 27 27 27.03 27.03 0 0 0 -27-27zm0 52a25 25 0 1 1 25-25 25.028 25.028 0 0 1 -25 25z"></path><path d="m45 19.5a3.5 3.5 0 0 0 -3.5-3.5h-.672a7.819 7.819 0 0 0 -2.993.59l-5.016-7.164a1 1 0 0 0 -1.638 0c-4.147 5.923-5.925 8.464-6.668 9.637l-12.665 1.949a1 1 0 0 0 -.667 1.561l4.881 6.974a7.772 7.772 0 0 0 -2.062 5.282v.671a3.462 3.462 0 0 0 .32 1.442l-3.139 4.485a1 1 0 0 0 .667 1.561l12.665 1.949c.743 1.173 2.521 3.714 6.668 9.637a1 1 0 0 0 1.638 0l2.867-4.1a3.461 3.461 0 0 0 1.814.526 3.5 3.5 0 0 0 3.5-3.5v-.793a.707.707 0 0 1 .707-.707h.793a3.5 3.5 0 0 0 3.156-2.012l6.5-1a1 1 0 0 0 .667-1.561l-6.602-9.427 6.6-9.427a1 1 0 0 0 -.667-1.561l-7.193-1.107a3.366 3.366 0 0 0 .039-.405zm-3.5-1.5a1.5 1.5 0 0 1 0 3h-.793a2.707 2.707 0 0 0 -2.707 2.707v.793a1.5 1.5 0 0 1 -3 0v-.671a5.828 5.828 0 0 1 5.828-5.829zm-9.5-6.256 4.1 5.856a7.877 7.877 0 0 0 -.806.694 7.777 7.777 0 0 0 -2.294 5.535v.671a3.474 3.474 0 0 0 .878 2.294l-1.878 3.221-5.813-9.966c1.072-1.533 4.286-6.125 5.813-8.305zm-7.521 9.348 5.779 9.908h-4.309a3.443 3.443 0 0 0 .051-.5 3.5 3.5 0 0 0 -3.5-3.5h-.672a7.772 7.772 0 0 0 -4.235 1.247l-3.852-5.5zm-8.479 13.737a5.828 5.828 0 0 1 5.828-5.829h.672a1.5 1.5 0 0 1 0 3h-.793a2.707 2.707 0 0 0 -2.707 2.707v.793a1.5 1.5 0 0 1 -3 0zm-.314 3.649a3.461 3.461 0 0 0 1.814.522 3.5 3.5 0 0 0 3.5-3.5v-.793a.707.707 0 0 1 .707-.707h.793a3.485 3.485 0 0 0 2.442-1h5.316l-5.779 9.908-10.738-1.652zm16.314 13.778-5.814-8.3 5.814-9.971 4.275 7.328a7.776 7.776 0 0 0 -2.275 5.516v.671a3.465 3.465 0 0 0 .32 1.442zm10.5-8.256h-.793a2.707 2.707 0 0 0 -2.707 2.707v.793a1.5 1.5 0 0 1 -3 0v-.671a5.828 5.828 0 0 1 5.828-5.829h.672a1.5 1.5 0 0 1 0 3zm7.759-2.744-4.318.664a3.5 3.5 0 0 0 -3.441-2.92h-.672a7.77 7.77 0 0 0 -3.956 1.08l-4.13-7.08h10.737zm0-18.512-5.78 8.256h-10.737l1.831-3.14a3.464 3.464 0 0 0 .927.14 3.5 3.5 0 0 0 3.5-3.5v-.793a.707.707 0 0 1 .707-.707h.793a3.479 3.479 0 0 0 2.618-1.2z"></path><path d="m30 18h2v2h-2z"></path><path d="m31 41h2v2h-2z"></path><path d="m23 37h2v2h-2z"></path><path d="m20 24h2v2h-2z"></path><path d="m42 26h2v2h-2z"></path><path d="m39 35h2v2h-2z"></path></g></svg>
+
+                            </div>
+
+                            <h3 class="h3 card-title">Kaju Katli</h3>
+
+                            <p class="card-text">
+                                Savor the perfection of Kaju Katli, an Indian sweet blending finely ground cashews, sugar, and ghee. Each bite is a celebration, encapsulating tradition and taste in a delightful symphony.
+                            </p>
+
+                            <img src="{{url_for('static',filename='assets/images/kajukatli.png')}}" width="300" height="300" loading="lazy" alt="Maxican Pizza" class="w-100 card-banner">
+
+                        </div>
+                    </li>
+
+                    <li class="promo-item">
+                        <div class="promo-card">
+
+                            <div class="card-icon">
+                                <svg id="fi_7427536" enable-background="new 0 0 512.065 512.065" height="60" viewBox="0 0 512.065 512.065" width="60" xmlns="http://www.w3.org/2000/svg"><g id="XMLID_865_" fill="#ff9d2d"><path id="XMLID_866_" d="m291.716 2.983c-138.695 21.213-267.499 149.989-288.718 288.717-19.829 129.653 60.912 220.365 178.949 220.365 149.755 0 303.642-138.119 327.133-291.718 21.579-141.094-76.277-238.942-217.364-217.364zm-74.377 486.312c-61.726 9.438-115.867-5.515-152.462-42.108-183.086-183.09 198.949-565.707 382.324-382.325 122.907 122.907-21.777 392.608-229.862 424.433z"></path><path id="XMLID_869_" d="m298.636 48.226c-118.773 18.166-232.173 131.265-250.393 250.394-16.943 110.776 55.138 182.033 165.199 165.2 118.771-18.165 232.175-131.265 250.393-250.393 16.877-110.338-54.692-182.095-165.199-165.201zm138.782 83.888c-3.06 26.005-24.463 47.616-50.656 50.716-34.022 4.072-61.594-23.553-57.527-57.541 3.099-26.185 24.716-47.59 50.726-50.645 26.111 10.284 46.455 29.528 57.457 57.47zm-245.831 245.891c-34.023 4.069-61.595-23.552-57.527-57.541 2.966-25.056 22.908-46.285 48.31-50.329 4.655 30.913 28.59 54.882 59.538 59.554-4.023 24.84-24.63 45.276-50.321 48.316zm61.102-67.486c-28.599-.161-50.984-22.478-51.144-51.132-.124-28.894 21.887-52.86 48.713-57.14 4.647 30.922 28.604 54.903 59.555 59.557-4.352 27.293-28.779 48.909-57.124 48.715zm67.887-67.894c-28.615-.146-50.993-22.486-51.139-51.135-.122-25.681 17.161-47.192 39.558-54.827 2.308 35.955 30.425 64.085 66.408 66.394-7.645 22.44-29.199 39.722-54.827 39.568zm24.447-176.119c-17.917 11.468-30.016 29.317-34.369 48.964-31.572 7.02-56.695 33.616-60.651 66.632-35.154 4.211-63.661 32.707-67.888 67.889-33.084 3.953-59.631 29.158-66.631 60.649-19.479 4.318-37.401 16.306-48.961 34.363-13.126-136.042 142.456-291.618 278.5-278.497zm-270.363 313.426c2.599-22.078 18.42-40.978 39.161-48.082 2.312 35.941 30.419 64.067 66.395 66.38-7.101 20.746-26.004 36.572-48.085 39.171-27.022-10.638-46.813-30.4-57.471-57.469zm369.405-169.528c-19.838 129.715-160.033 246.431-277.015 235.144 18.04-11.545 30.044-29.464 34.369-48.957 31.963-7.091 56.666-34.376 60.637-66.638 35.166-4.215 63.689-32.705 67.903-67.892 33.088-3.964 59.63-29.15 66.634-60.653 19.472-4.317 37.398-16.301 48.961-34.363 1.311 13.573.844 28.106-1.489 43.359z"></path><path id="XMLID_878_" d="m321.326 331.4c-5.522 0-10 4.477-10 10v10.044c0 5.523 4.478 10 10 10s10-4.477 10-10v-10.044c0-5.523-4.478-10-10-10z"></path><path id="XMLID_879_" d="m281.149 361.533c-5.522 0-10 4.477-10 10v10.044c0 5.523 4.478 10 10 10s10-4.477 10-10v-10.044c0-5.523-4.477-10-10-10z"></path><path id="XMLID_880_" d="m391.636 251.046c-5.522 0-10 4.477-10 10v10.044c0 5.523 4.478 10 10 10s10-4.477 10-10v-10.044c0-5.523-4.478-10-10-10z"></path><path id="XMLID_881_" d="m361.503 291.223c-5.523 0-10 4.477-10 10v10.044c0 5.523 4.477 10 10 10 5.522 0 10-4.477 10-10v-10.044c0-5.523-4.478-10-10-10z"></path><path id="XMLID_882_" d="m160.619 200.737h10.045c5.522 0 10-4.477 10-10s-4.478-10-10-10h-10.045c-5.522 0-10 4.477-10 10s4.477 10 10 10z"></path><path id="XMLID_883_" d="m130.487 240.913h10.044c5.522 0 10-4.477 10-10s-4.478-10-10-10h-10.044c-5.522 0-10 4.477-10 10s4.478 10 10 10z"></path><path id="XMLID_884_" d="m240.972 130.427h10.045c5.522 0 10-4.477 10-10s-4.478-10-10-10h-10.045c-5.522 0-10 4.477-10 10s4.478 10 10 10z"></path><path id="XMLID_885_" d="m200.796 160.56h10.045c5.522 0 10-4.477 10-10s-4.478-10-10-10h-10.045c-5.522 0-10 4.477-10 10s4.477 10 10 10z"></path></g></svg>
+                            </div>
+
+                            <h3 class="h3 card-title">Rasmalai</h3>
+                            <p class="card-text">
+                                Indulge in the divine delight of Rasmalai, a rich Indian dessert where soft, spongy cheese dumplings swim in creamy, cardamom-infused milk. A symphony of flavors awaits your palate.
+                            </p>
+
+                            <img src="{{url_for('static',filename='assets/images/rasmalai.png')}}" width="300" height="300" loading="lazy" alt="Soft Drinks" class="w-100 card-banner">
+
+                        </div>
+                    </li>
+
+                    <li class="promo-item">
+                        <div class="promo-card">
+
+                            <div class="card-icon">
+
+                                <svg id="Filled_Expand" height="60" viewBox="0 0 64 64" width="60" xmlns="http://www.w3.org/2000/svg" data-name="Filled Expand"><g fill="#ff9d2d"><path d="m39 50h-36a111.11 111.11 0 0 1 0-42h36a111.11 111.11 0 0 1 0 42z" fill="#fff"/><path d="m40 3-3.8-2-3.8 2-3.8-2-3.8 2-3.8-2-3.8 2-3.8-2-3.8 2-3.8-2-3.8 2 1 5h36z" fill="#fff"/><path d="m2 55 3.8 2 3.8-2 3.8 2 3.8-2 3.8 2 3.8-2 3.8 2 3.8-2 3.8 2 3.8-2-1-5h-36z" fill="#fff"/><g fill="#fff"><path d="m34.26 23.36-9.83 3.58a1 1 0 0 1 -1.34-1.06l1.34-11.62a1 1 0 0 1 1.68-.61l8.49 8a1 1 0 0 1 -.34 1.71z"/><path d="m6.29 24.14 7.4-7.4a1 1 0 0 1 1.66.39l3.7 11.1a1 1 0 0 1 -1.27 1.27l-11.1-3.7a1 1 0 0 1 -.39-1.66z"/><path d="m27.23 45h-10.46a1 1 0 0 1 -.9-1.45l5.24-10.46a1 1 0 0 1 1.78 0l5.24 10.46a1 1 0 0 1 -.9 1.45z"/></g><path d="m61 57h-32a73.16 73.16 0 0 1 0-34h32a73.16 73.16 0 0 1 0 34z" fill="#fff"/><path d="m62 19-3.38-2-3.38 2-3.38-2-3.38 2-3.38-2-3.38 2-3.38-2-3.38 2-3.38-2-3.38 2 1 4h31.8z" fill="#fff"/><path d="m28.2 61 3.38 2 3.38-2 3.38 2 3.38-2 3.38 2 3.38-2 3.38 2 3.38-2 3.38 2 3.38-2-1-4h-31.8z" fill="#fff"/><circle cx="49" cy="40" fill="#fff" r="8"/><path d="m45 42.5c0 3.81 4 5.5 4 5.5h-10a5.77 5.77 0 0 1 -6-5.5 5.77 5.77 0 0 1 6-5.5 5.77 5.77 0 0 1 6 5.5z" fill="#fff"/><path d="m62 57a73.88 73.88 0 0 0 0-34l1-3.76a1 1 0 0 0 -.46-1.1l-3.38-2a1 1 0 0 0 -1 0l-2.87 1.7-2.87-1.7a1 1 0 0 0 -1 0l-2.87 1.7-2.87-1.7a1 1 0 0 0 -1 0l-2.87 1.7-.28-.17c-.42-3.36-.9-6.61-1.53-9.67l1-4.8a1 1 0 0 0 -.52-1.08l-3.79-2a1 1 0 0 0 -.94 0l-3.35 1.75-3.33-1.75a1 1 0 0 0 -.93 0l-3.34 1.75-3.33-1.75a1 1 0 0 0 -.93 0l-3.34 1.75-3.33-1.75a1 1 0 0 0 -.93 0l-3.33 1.75-3.34-1.75a1 1 0 0 0 -.93 0l-3.8 2a1 1 0 0 0 -.54 1.08l1 4.8a111.88 111.88 0 0 0 0 42l-1 4.8a1 1 0 0 0 .51 1.08l3.8 2a1 1 0 0 0 .93 0l3.34-1.75 3.33 1.75a1 1 0 0 0 .93 0l3.33-1.75 3.34 1.75a1 1 0 0 0 .93 0l3.33-1.75 3.23 1.67-.74 3a1 1 0 0 0 .46 1.1l3.38 2a1 1 0 0 0 1 0l2.9-1.74 2.87 1.7a1 1 0 0 0 1 0l2.87-1.7 2.87 1.7a1 1 0 0 0 1 0l2.87-1.7 2.87 1.7a1 1 0 0 0 1 0l2.87-1.7 2.87 1.7a1 1 0 0 0 1 0l3.38-2a1 1 0 0 0 .46-1.1zm-20.79-37.14a1 1 0 0 0 1 0l2.87-1.7 2.92 1.7a1 1 0 0 0 1 0l2.87-1.7 2.87 1.7a1 1 0 0 0 1 0l2.87-1.7 2.23 1.32-.63 2.52h-30.21l-.63-2.52 2.23-1.32 2.87 1.7a1 1 0 0 0 1 0l2.87-1.7zm-35.4-17.73 3.33 1.75a1 1 0 0 0 .93 0l3.34-1.75 3.33 1.75a1 1 0 0 0 .93 0l3.33-1.75 3.34 1.75a1 1 0 0 0 .93 0l3.33-1.75 3.33 1.75a1 1 0 0 0 .94 0l3.33-1.75 2.67 1.41-.69 3.46h-34.35l-.69-3.46zm-1.97 6.87h34.33q.69 3.56 1.13 7.4l-.45-.26a1 1 0 0 0 -1 0l-2.85 1.7-2.87-1.7a1 1 0 0 0 -1 0l-.54.32-3.79-3.53a2 2 0 0 0 -3.36 1.22l-1.34 11.62a2 2 0 0 0 2.67 2.11l2.35-.88a73.32 73.32 0 0 0 -1.07 10.14l-2.26-4.52a2 2 0 0 0 -1.79-1.08 2 2 0 0 0 -1.79 1.1l-5.21 10.47a2 2 0 0 0 1.77 2.89h9.46q.12 1.52.3 3h-22.69a109.76 109.76 0 0 1 0-40zm22.26 35h-9.33l5.23-10.46 4 8c0 .84.06 1.65.1 2.46zm-.83 10.12a1 1 0 0 0 -.93 0l-3.34 1.75-3.33-1.75a1 1 0 0 0 -.93 0l-3.33 1.75-3.34-1.75a1 1 0 0 0 -.93 0l-3.33 1.75-2.67-1.41.69-3.46h23c.22 1.47.49 2.92.8 4.34zm2.3-29.39-3.48 1.27 1.33-11.62 3.32 3.14-1 .62a1 1 0 0 0 -.46 1.1l.85 3.4c-.21.65-.41 1.43-.56 2.09zm31 37.11-2.87-1.7a1 1 0 0 0 -1 0l-2.87 1.7-2.83-1.7a1.06 1.06 0 0 0 -.51-.14 1 1 0 0 0 -.51.14l-2.87 1.7-2.87-1.7a1 1 0 0 0 -1 0l-2.87 1.7-2.87-1.7a1 1 0 0 0 -1 0l-2.87 1.7-2.23-1.32.6-2.52h30.21l.63 2.52zm1.64-5.84h-30.42a72 72 0 0 1 0-32h30.42a72 72 0 0 1 0 32z"/><path d="m49 31a9 9 0 0 0 -8.16 5.23 7.92 7.92 0 0 0 -1.84-.23 6.77 6.77 0 0 0 -7 6.5 6.77 6.77 0 0 0 7 6.5h10a9 9 0 0 0 0-18zm-10 16a4.77 4.77 0 0 1 -5-4.5 4.77 4.77 0 0 1 5-4.5 4.77 4.77 0 0 1 5 4.5 6.38 6.38 0 0 0 1.89 4.5zm10.2 0c-.72-.36-3.2-1.8-3.2-4.49a6.41 6.41 0 0 0 -3.3-5.51 7 7 0 1 1 6.5 10z"/><path d="m6.38 26.75 11.09 3.69a2 2 0 0 0 2.53-2.53l-3.7-11.09a2 2 0 0 0 -3.3-.82l-7.4 7.39a2 2 0 0 0 .78 3.36zm8-9.3 3.7 11.1-11.08-3.7z"/></g></svg>
+                            </div>
+
+                            <h3 class="h3 card-title">Falhari Chiwda</h3>
+                            <p class="card-text">
+                                Savor the crunch and flavor of Falhari Chiwda, a delightful snack perfect for fasting days. Made with select ingredients, it's a tasty and nutritious choice for your special occasions.
+                            </p>
+
+
+                            <img src="{{url_for('static',filename='assets/images/falhari.png')}}" width="300" height="300" loading="lazy" alt="French Fry" class="w-100 card-banner">
+
+                        </div>
+                    </li>
+
+                    <li class="promo-item">
+                        <div class="promo-card">
+
+                            <div class="card-icon">
+                                <svg id="fi_3862495" enable-background="new 0 0 512 512" height="60" viewBox="0 0 512 512" width="60" xmlns="http://www.w3.org/2000/svg"><g fill="#ff9d2d"><g><path d="m487.53 407.712h-6.385c4.658-27.458-17.256-51.656-32.883-71.489-4.697-5.962-9.281-12.069-13.621-18.152-2.403-3.368-7.083-4.151-10.449-1.747-3.368 2.403-4.15 7.082-1.747 10.449 4.479 6.277 9.207 12.577 14.051 18.724 1.143 1.451 2.349 2.96 3.598 4.521 13.159 16.459 30.838 38.57 25.704 57.693h-22.105c-3.438-5.752-8.478-9.526-12.945-12.851-3.028-2.255-5.889-4.384-7.877-6.832-4.607-5.672-6.383-12.211-7.633-20.285-1.157-7.474-.904-14.923-1.106-22.375-.517-19.091-10.959-30.964-20.171-41.44-3.435-3.906-6.679-7.595-9.399-11.554-4.917-7.167-7.003-19.665-6.248-37.187 5.623 5.955 9.456 13.636 13.482 21.709 3.441 6.899 7.154 13.608 11.135 20.21 2.137 3.544 6.741 4.682 10.284 2.546 3.543-2.137 4.683-6.741 2.546-10.284-9.804-16.255-15.5-35.118-30.171-47.959-6.971-6.101-17.111-6.048-24.008-.004-9.31 8.16-14.551 18.658-19.619 28.81-1.873 3.752-3.642 7.295-5.61 10.733-6.492 11.367-13.714 22.702-21.561 33.895-10.029-14.312-19.398-29.055-27.17-44.635-5.063-10.151-10.299-20.647-19.614-28.799-6.208-5.451-17.962-5.305-24.009-.004-9.31 8.16-14.551 18.658-19.619 28.81-1.873 3.752-3.642 7.295-5.61 10.733-6.491 11.366-13.714 22.701-21.562 33.894-7.825-11.167-15.045-22.504-21.562-33.901-1.965-3.433-3.734-6.978-5.606-10.732-5.064-10.151-10.3-20.648-19.615-28.8-6.953-6.106-17.069-6.085-24.008-.004-9.311 8.161-14.552 18.658-19.619 28.81-1.873 3.752-3.642 7.295-5.61 10.733-10.664 18.674-23.264 37.272-37.45 55.276-1.121 1.423-2.305 2.904-3.53 4.436-13.727 17.168-33.597 42.019-29.35 67.05h-6.388c-6.926 0-12.561 5.635-12.561 12.561v7.613c0 26.598 21.639 48.237 48.237 48.237h32.231l4.423 15.992c3.237 11.71 13.981 19.887 26.128 19.887h44.989c4.137 0 7.491-3.354 7.491-7.491s-3.354-7.491-7.491-7.491h-44.989c-5.434 0-10.24-3.658-11.689-8.895l-3.318-11.999h296.158l-3.318 11.999c-1.448 5.237-6.255 8.895-11.689 8.895h-186.956c-4.137 0-7.491 3.354-7.491 7.491s3.354 7.491 7.491 7.491h186.955c12.147 0 22.892-8.177 26.129-19.884l4.423-15.992h32.231c26.598 0 48.237-21.639 48.237-48.237v-7.613c.001-6.927-5.634-12.562-12.561-12.562zm-138.172-119.325c4.778-8.345 8.544-17.552 13.628-25.525.047-.073.093-.146.14-.219.044 13.5 1.997 27.883 9.084 38.212 3.23 4.701 6.925 8.904 10.5 12.968 8.625 9.808 16.074 18.278 16.445 31.953.22 8.074.031 16.223 1.276 24.261 1.337 8.632 3.666 18.642 10.809 27.437 3.169 3.902 6.926 6.699 10.56 9.404.378.281.75.559 1.117.833h-31.406-27.901c4.694-26.459-17.545-51.96-32.93-71.486-2.242-2.846-4.431-5.714-6.595-8.591 9.271-12.926 17.744-26.063 25.273-39.247zm-88.626-33.198c5.622 5.955 9.455 13.636 13.482 21.709 1.885 3.777 3.833 7.684 6.01 11.486 12.39 21.666 26.741 42.199 42.286 61.635 13.16 16.459 30.839 38.571 25.705 57.694h-22.105c-3.438-5.752-8.478-9.525-12.945-12.851-3.028-2.255-5.889-4.384-7.877-6.832-4.607-5.672-6.383-12.211-7.633-20.285-1.151-7.435-.904-14.92-1.106-22.375-.517-19.092-10.959-30.965-20.171-41.44-3.435-3.906-6.678-7.594-9.399-11.554-4.918-7.167-7.002-19.666-6.247-37.187zm-54.237 72.434c9.272-12.923 17.752-26.055 25.28-39.237 4.39-7.687 7.815-15.83 12.339-23.435.048-.081.097-.161.146-.241.357-.597.721-1.184 1.091-1.766.064-.101.128-.202.193-.302.044 13.5 1.996 27.884 9.084 38.212 3.23 4.701 6.925 8.903 10.499 12.967 8.626 9.808 16.075 18.279 16.445 31.952.219 8.069.033 16.23 1.277 24.262 1.337 8.632 3.666 18.642 10.809 27.437 3.299 4.061 7.555 7.138 11.684 10.255-5.588-.099-11.191-.017-16.783-.017-.118 0-42.579 0-42.579 0 4.246-25.03-15.622-49.881-29.349-67.049-.827-1.03-10.674-12.287-10.136-13.038zm-63.348-72.435c5.623 5.955 9.456 13.637 13.483 21.71 1.884 3.777 3.833 7.683 6.01 11.485 11.088 19.389 24.105 38.605 38.689 57.115 7.561 9.597 15.539 19.019 21.758 29.625 3.025 5.159 5.688 10.629 7.205 16.436.357 1.368 2.548 16.154.34 16.154h-22.105c-3.437-5.753-8.478-9.526-12.945-12.851-5.893-4.388-10.431-8.962-12.942-16.046-2.393-6.749-3.215-14.642-3.462-21.779-.134-3.888-.106-7.779-.212-11.667-.518-19.092-10.959-30.965-20.171-41.44-3.435-3.906-6.678-7.594-9.399-11.554-4.918-7.168-7.003-19.666-6.249-37.188zm-71.239 94.83c15.586-19.488 29.879-39.962 42.284-61.631 4.344-7.588 7.639-15.385 12.051-22.934.517-.884 1.044-1.754 1.587-2.605.043-.068.086-.136.13-.204.044 13.5 1.997 27.883 9.084 38.212 3.23 4.701 6.925 8.903 10.499 12.967 8.625 9.808 16.074 18.279 16.445 31.952.22 8.092.031 16.223 1.276 24.262 1.337 8.633 3.667 18.643 10.809 27.437 3.169 3.902 6.926 6.699 10.56 9.404.378.281.751.559 1.117.833h-37.824-103.724c-5.133-19.122 12.546-41.234 25.706-57.693zm413.201 77.868c0 18.337-14.918 33.255-33.254 33.255h-391.71c-18.336 0-33.254-14.918-33.254-33.255v-5.192h458.218z"></path><path d="m282.689 171.76c1.109.361 2.237.536 3.349.536 3.447 0 6.738-1.677 8.794-4.665 2.728-3.963 2.534-9.13-.483-12.856-4.416-5.455-6.155-9.957-5.314-13.762.724-3.281 1.473-6.673 19.398-14.066 21.948-9.047 39.992-24.889 49.295-47.105 6.676-15.944 7.234-31.87 1.57-44.844-10.139-23.223-32.004-34.998-64.988-34.998h-12.824c-4.242 0-7.983 2.391-9.764 6.241-1.78 3.848-1.181 8.245 1.564 11.477.99 1.165 2.019 2.347 3.063 3.547 7.019 8.064 14.276 16.402 13.932 24.45-.47 10.967-9.286 21.394-16.914 29.252l-1.218 1.253c-7.746 7.962-15.756 16.195-20.493 27.051-6.478 14.845-5.289 32.673 3.103 46.527 6.169 10.182 16.349 18.187 27.93 21.962zm-17.3-62.497c3.647-8.356 10.376-15.273 17.5-22.597 10.66-10.958 21.67-24.135 22.362-40.312.525-12.287-7.163-22.712-14.53-31.372h3.589c26.849 0 43.615 8.508 51.256 26.01 3.953 9.054 3.348 21.105-1.659 33.063-7.786 18.595-22.868 31.485-41.187 39.041-11.208 4.622-25.156 10.374-28.316 24.686-.938 4.249-.739 8.522.616 12.878-2.952-2.479-5.49-5.399-7.446-8.627-5.911-9.757-6.749-22.314-2.185-32.77z"></path><path d="m167.805 157.348c5.516 4.304 11.601 7.103 17.486 9.811 9.586 4.408 18.769 9.58 27.22 15.973 8.58 6.491 14.142 13.274 16.084 19.617 1.229 4.015 4.849 6.659 8.976 6.659.279 0 .561-.012.844-.037 4.472-.388 7.983-3.768 8.536-8.218 1.328-10.665-1.771-22.933-8.728-34.544-3.439-5.74-7.436-11-11.301-16.086-4.393-5.781-8.542-11.241-11.783-17.179-12.012-22.011-9.841-50.249 5.402-70.266.099-.13.193-.262.283-.398 0 0 .863-1.301.863-1.301 1.977-2.98 2.105-6.764.336-9.872-1.769-3.109-5.087-4.922-8.659-4.753-27.284 1.354-53.019 26.915-61.214 49.82-7.871 21.996-1.286 47.555 15.655 60.774zm-1.548-55.728c5.156-14.41 19.705-30.575 35.602-37.041-12.402 23.384-12.652 52.52.13 75.941 3.781 6.929 8.471 13.1 13.005 19.067 3.746 4.929 7.286 9.588 10.28 14.558-1.188-.995-2.428-1.983-3.724-2.963-9.294-7.031-19.57-12.839-29.997-17.635-5.342-2.458-10.388-4.779-14.531-8.011-11.994-9.358-16.521-27.828-10.765-43.916z"></path></g></g></svg>
+                            </div>
+                            <h3 class="h3 card-title">Samosa</h3>
+                            <p class="card-text">
+                                Indulge in the savory delight of Samosa, a popular triangular pastry filled with spiced potatoes, peas, and a medley of aromatic spices. A crispy, flavorful treat enjoyed across cultures.
+                            </p>
+                            <img src="{{url_for('static',filename='assets/images/samosa.png')}}" width="300" height="300" loading="lazy" alt="Burger Kingo" class="w-100 card-banner">
+
+                        </div>
+                    </li>
+
+                    <li class="promo-item">
+                        <div class="promo-card">
+
+                            <div class="card-icon">
+
+                                <svg id="Capa_1" enable-background="new 0 0 512 512" height="60" viewBox="0 0 512 512" width="60" xmlns="http://www.w3.org/2000/svg"><g fill="#ff9d2d"><g><path d="m496.42 345.48h-51.306c.128-.853.215-1.719.215-2.606v-109.098c0-9.705-7.896-17.602-17.602-17.602h-73.532c.127-.852.215-1.717.215-2.604v-109.09c0-9.71-7.896-17.61-17.6-17.61h-77.45c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h77.45c1.434 0 2.6 1.171 2.6 2.61v47.044h-166.82v-47.044c0-1.439 1.167-2.61 2.6-2.61h49.17c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-49.17c-9.705 0-17.6 7.9-17.6 17.61v109.09c0 .887.087 1.752.215 2.604h-73.533c-9.706 0-17.602 7.896-17.602 17.602v109.098c0 .888.087 1.754.215 2.606h-51.305c-8.591 0-15.58 6.989-15.58 15.58v16.16c0 8.591 6.989 15.58 15.58 15.58h49.644l9.525 21.776c2.805 6.411 9.137 10.554 16.131 10.554h238.53c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-238.53c-1.035 0-1.973-.614-2.388-1.565l-6.895-15.765h17.923c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-29.451c-.018 0-.035 0-.053 0h-54.436c-.32 0-.58-.261-.58-.58v-16.16c0-.324.255-.579.58-.579h480.84c.325 0 .58.255.58.579v16.16c0 .319-.26.58-.58.58h-54.415c-.036-.001-.071 0-.106 0h-307.379c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h295.884l-6.895 15.765c-.416.951-1.354 1.565-2.389 1.565h-56.71c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h56.71c6.994 0 13.326-4.143 16.131-10.554l9.525-21.776h49.644c8.591 0 15.58-6.989 15.58-15.58v-16.16c0-8.591-6.989-15.58-15.58-15.58zm-414.749-49.655h166.829v47.049c0 1.435-1.167 2.602-2.602 2.602h-161.626c-1.435 0-2.602-1.167-2.602-2.602v-47.049zm181.829 0h166.829v47.049c0 1.435-1.167 2.602-2.602 2.602h-161.625c-1.435 0-2.602-1.167-2.602-2.602zm166.829-62.049v47.049h-166.829v-47.049c0-1.435 1.167-2.602 2.602-2.602h161.626c1.434.001 2.601 1.168 2.601 2.602zm-90.919-67.252v47.046c0 1.434-1.167 2.6-2.6 2.6h-161.62c-1.434 0-2.6-1.166-2.6-2.6v-47.046zm-255.138 64.651h161.626c1.435 0 2.602 1.167 2.602 2.602v47.049h-166.829v-47.049c0-1.435 1.167-2.602 2.601-2.602z"/><path d="m290.568 263.5h8.081c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-8.081c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5z"/><path d="m314.589 328.15h8.082c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-8.082c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5z"/><path d="m346.915 263.5h8.082c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-8.082c-4.142 0-7.5 3.357-7.5 7.5s3.357 7.5 7.5 7.5z"/><path d="m394.098 328.15h8.081c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-8.081c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5z"/><path d="m219.634 328.15h8.081c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-8.081c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5z"/><path d="m195.613 263.5h8.082c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-8.082c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5z"/><path d="m203.694 119.199c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h8.081c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5z"/><path d="m223.675 198.85h8.081c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-8.081c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5z"/><path d="m290.568 134.199c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-8.082c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5z"/><path d="m163.288 328.15h8.082c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-8.082c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5z"/><path d="m116.105 263.5h8.081c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-8.081c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5z"/></g></g></svg>
+                            </div>
+
+                            <h3 class="h3 card-title">Dhokla</h3>
+                            <p class="card-text">
+                                Experience the light and fluffy goodness of Dhokla, a steamed fermented cake made from rice and chickpea flour. A popular Indian snack known for its spongy texture and delightful taste.
+                            </p>
+
+
+                            <img src="{{url_for('static',filename='assets/images/dhokla.png')}}" width="300" height="300" loading="lazy" alt="Chicken Masala" class="w-100 card-banner">
+
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="section section-divider gray about" id="about">
+            <div class="container">
+
+                <div class="about-banner">
+                    <img src="{{url_for('static',filename='assets/images/satkar-shop.jpeg')}}" width="509" height="459" loading="lazy" alt="Burger with Drinks" class="w-100 about-img rounded">
+
+
+                </div>
+
+                <div class="about-content">
+
+                    <h2 class="h2 section-title">
+                        History
+                        <span class="span">Satkar ! </span>
+                    </h2>
+
+                    <p class="section-text">
+                        Welcome to Satkar sweets, where our love for Indian culture, traditions, movies, and especially food comes to life! Our passion for sweets goes beyond the ordinary.
+
+                        <br>Established in 1980, satkar sweets has been on a mission to bring the rich, authentic flavors of Indian sweets and snacks to doorsteps across the Yavatmal. With a wide range of offerings, we bring you a delightful selection
+                        of Indian sweets, snacks, namkeen, and more.
+                    </p>
+
+                    <ul class="about-list">
+
+                        <li class="about-item">
+                            <ion-icon name="checkmark-outline"></ion-icon>
+
+                            <span class="span">Delicious & Healthy Foods</span>
+                        </li>
+
+                        <li class="about-item">
+                            <ion-icon name="checkmark-outline"></ion-icon>
+
+                            <span class="span">Spacific Family And Kids Zone</span>
+                        </li>
+
+                        <li class="about-item">
+                            <ion-icon name="checkmark-outline"></ion-icon>
+
+                            <span class="span">Fastest Food Home Delivery</span>
+                        </li>
+
+                    </ul>
+
+                    <button class="btn btn-hover">Order Now</button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section class="section food-menu" id="food-menu">
+            <div class="container">
+
+                <p class="section-subtitle">Popular Dishes</p>
+
+                <h2 class="h2 section-title">
+                    Our Delicious <span class="span">Foods</span>
+                </h2>
+
+                <p class="section-text">
+                    Food is any substance consumed to provide nutritional support for an organism.
+                </p>
+
+                <ul class="fiter-list">
+
+                    <li>
+                        <button class="filter-btn  active">All</button>
+                    </li>
+
+                    <li>
+                        <button class="filter-btn">Sweet</button>
+                    </li>
+
+                    <li>
+                        <button class="filter-btn">Namkeen</button>
+                    </li>
+
+                    <li>
+                        <button class="filter-btn">Snacks</button>
+                    </li>
+
+                    <li>
+                        <button class="filter-btn">Fast Food</button>
+                    </li>
+
+                </ul>
+
+                <ul class="food-menu-list">
+
+                    <li>
+                        <div class="food-menu-card">
+
+                            <div class="card-banner">
+                                <img src="{{url_for('static',filename='assets/images/food-menu-1.png')}}" width="300" height="300" loading="lazy" alt="Fried Chicken Unlimited" class="w-100">
+
+                                <div class="badge">-15%</div>
+
+                                <button class="btn food-menu-btn">Order Now</button>
+                            </div>
+
+                            <div class="wrapper">
+                                <p class="category">Chicken</p>
+
+                                <div class="rating-wrapper">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                </div>
+                            </div>
+
+                            <h3 class="h3 card-title">Fried Chicken Unlimited</h3>
+
+                            <div class="price-wrapper">
+
+                                <p class="price-text">Price:</p>
+
+                                <data class="price">$49.00</data>
+
+                                <del class="del" value="69.00">$69.00</del>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="food-menu-card">
+
+                            <div class="card-banner">
+                                <img src="{{url_for('static',filename='assets/images/food-menu-2.png')}}" width="300" height="300" loading="lazy" alt="Burger King Whopper" class="w-100">
+
+                                <div class="badge">-10%</div>
+
+                                <button class="btn food-menu-btn">Order Now</button>
+                            </div>
+
+                            <div class="wrapper">
+                                <p class="category">Noddles</p>
+
+                                <div class="rating-wrapper">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                </div>
+                            </div>
+
+                            <h3 class="h3 card-title">Burger King Whopper</h3>
+
+                            <div class="price-wrapper">
+
+                                <p class="price-text">Price:</p>
+
+                                <data class="price" value="29.00">$29.00</data>
+
+                                <del class="del">$39.00</del>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="food-menu-card">
+
+                            <div class="card-banner">
+                                <img src="{{url_for('static',filename='assets/images/food-menu-3.png')}}" width="300" height="300" loading="lazy" alt="White Castle Pizzas" class="w-100">
+
+                                <div class="badge">-25%</div>
+
+                                <button class="btn food-menu-btn">Order Now</button>
+                            </div>
+
+                            <div class="wrapper">
+                                <p class="category">Pizzas</p>
+
+                                <div class="rating-wrapper">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                </div>
+                            </div>
+
+                            <h3 class="h3 card-title">White Castle Pizzas</h3>
+
+                            <div class="price-wrapper">
+
+                                <p class="price-text">Price:</p>
+
+                                <data class="price" value="49.00">$49.00</data>
+
+                                <del class="del">$69.00</del>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="food-menu-card">
+
+                            <div class="card-banner">
+                                <img src="{{url_for('static',filename='assets/images/food-menu-4.png')}}" width="300" height="300" loading="lazy" alt="Bell Burrito Supreme" class="w-100">
+
+                                <div class="badge">-20%</div>
+
+                                <button class="btn food-menu-btn">Order Now</button>
+                            </div>
+
+                            <div class="wrapper">
+                                <p class="category">Burrito</p>
+
+                                <div class="rating-wrapper">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                </div>
+                            </div>
+
+                            <h3 class="h3 card-title">Bell Burrito Supreme</h3>
+
+                            <div class="price-wrapper">
+
+                                <p class="price-text">Price:</p>
+
+                                <data class="price" value="59.00 ">$59.00</data>
+
+                                <del class="del">$69.00</del>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="food-menu-card">
+
+                            <div class="card-banner">
+                                <img src="{{url_for('static',filename='assets/images/food-menu-5.png')}}" width="300" height="300" loading="lazy" alt="Kung Pao Chicken BBQ" class="w-100">
+
+                                <div class="badge">-5%</div>
+
+                                <button class="btn food-menu-btn">Order Now</button>
+                            </div>
+
+                            <div class="wrapper">
+                                <p class="category">Nuggets</p>
+
+                                <div class="rating-wrapper">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                </div>
+                            </div>
+
+                            <h3 class="h3 card-title">Kung Pao Chicken BBQ</h3>
+
+                            <div class="price-wrapper">
+
+                                <p class="price-text">Price:</p>
+
+                                <data class="price" value="49.00">$49.00</data>
+
+                                <del class="del">$69.00</del>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="food-menu-card">
+
+                            <div class="card-banner">
+                                <img src="{{url_for('static',filename='assets/images/food-menu-6.png')}}" width="300" height="300" loading="lazy" alt="Wendy's Chicken" class="w-100">
+
+                                <div class="badge">-15%</div>
+
+                                <button class="btn food-menu-btn">Order Now</button>
+                            </div>
+
+                            <div class="wrapper">
+                                <p class="category">Chicken</p>
+
+                                <div class="rating-wrapper">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                </div>
+                            </div>
+
+                            <h3 class="h3 card-title">Wendy's Chicken</h3>
+
+                            <div class="price-wrapper">
+
+                                <p class="price-text">Price:</p>
+
+                                <data class="price" value="49.00">$49.00</data>
+
+                                <del class="del">$69.00</del>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+        </section>
+        <section class="section section-divider white cta" style="background-image: url('{{url_for('static',filename='assets/images/hero-bg.jpg')}}')">
+            <div class="container">
+
+                <div class="cta-content">
+
+                    <h2 class="h2 section-title">
+                        The Foodie Have Excellent Of
+                        <span class="span">Quality Burgers!</span>
+                    </h2>
+
+                    <p class="section-text">
+                        The restaurants in Hangzhou also catered to many northern Chinese who had fled south from Kaifeng during the Jurchen invasion of the 1120s, while it is also known that many restaurants were run by families.
+                    </p>
+
+                    <button class="btn btn-hover">Order Now</button>
+                </div>
+
+                <figure class="cta-banner">
+                    <img src="{{url_for('static',filename='assets/images/cta-banner.png')}}" width="700" height="637" loading="lazy" alt="Burger" class="w-100 cta-img">
+
+                    <img src="{{url_for('static',filename='assets/images/sale-shape.png')}}" width="216" height="226" loading="lazy" alt="get up to 50% off now" class="abs-img scale-up-anim">
+                </figure>
+
+            </div>
+        </section>
+        <section class="section section-divider gray delivery">
+            <div class="container">
+
+                <div class="delivery-content">
+
+                    <h2 class="h2 section-title">
+                        A Moments Of Delivered On <span class="span">Right Time</span> & Place
+                    </h2>
+
+                    <p class="section-text">
+                        Welcome to Satkar sweets, where our love for Indian culture, traditions, movies, and especially food comes to life! Our passion for sweets goes beyond the ordinary.
+                    </p>
+
+                    <button class="btn btn-hover">Order Now</button>
+                </div>
+
+                <figure class="delivery-banner">
+                    <img src="{{url_for('static',filename='assets/images/delivery-banner-bg.png')}}" width="700" height="602" loading="lazy" alt="clouds" class="w-100">
+
+                    <img src="{{url_for('static',filename='assets/images/delivery-boy.svg')}}" width="1000" height="880" loading="lazy" alt="delivery boy" class="w-100 delivery-img" data-delivery-boy>
+                </figure>
+
+            </div>
+        </section>
+
+
+
+        <section class="section section-divider gray banner">
+            <div class="container">
+
+                <ul class="banner-list">
+
+                    <li class="banner-item banner-lg">
+                        <div class="banner-card">
+
+                            <img src="{{url_for('static',filename='assets/images/banner-1.jpg')}}" width="550" height="450" loading="lazy" alt="Discount For Delicious Tasty Burgers!" class="banner-img">
+
+                            <div class="banner-item-content">
+                                <p class="banner-subtitle">50% Off Now!</p>
+
+                                <h3 class="banner-title">Discount For Delicious Tasty Burgers!</h3>
+
+                                <p class="banner-text">Sale off 50% only this week</p>
+
+                                <button class="btn">Order Now</button>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="banner-item banner-sm">
+                        <div class="banner-card">
+
+                            <img src="{{url_for('static',filename='assets/images/banner-2.jpg')}}" width="550" height="465" loading="lazy" alt="Delicious Pizza" class="banner-img">
+
+                            <div class="banner-item-content">
+                                <h3 class="banner-title">Delicious Pizza</h3>
+
+                                <p class="banner-text">50% off Now</p>
+
+                                <button class="btn">Order Now</button>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="banner-item banner-sm">
+                        <div class="banner-card">
+
+                            <img src="{{url_for('static',filename='assets/images/banner-3.jpg')}}" width="550" height="465" loading="lazy" alt="American Burgers" class="banner-img">
+
+                            <div class="banner-item-content">
+                                <h3 class="banner-title">American Burgers</h3>
+
+                                <p class="banner-text">50% off Now</p>
+
+                                <button class="btn">Order Now</button>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="banner-item banner-md">
+                        <div class="banner-card">
+
+                            <img src="{{url_for('static',filename='assets/images/banner-4.jpg')}}" width="550" height="220" loading="lazy" alt="Tasty Buzzed Pizza" class="banner-img">
+
+                            <div class="banner-item-content">
+                                <h3 class="banner-title">Tasty Buzzed Pizza</h3>
+
+                                <p class="banner-text">Sale off 50% only this week</p>
+
+                                <button class="btn">Order Now</button>
+                            </div>
+
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </section>
+    </article>
+</main>
+
+
+
+{% endblock %}

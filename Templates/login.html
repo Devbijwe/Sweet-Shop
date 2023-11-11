@@ -1,0 +1,27 @@
+{% extends "layout.html" %} {% block main %}
+
+<div class="container p-5">
+    <div class="row justify-content-center">
+        <div class="col-8 col-md-6">
+            <form action="" class="s-form">
+
+                <p class="footer-list-title">Login</p>
+
+
+                <input type="email" name="email_address" required placeholder="Email" aria-label="Email" class="input-field  m-2 mb-4">
+
+                <input type="password" name="password" required placeholder="Password" aria-label="password" class="input-field m-2">
+
+
+
+
+                <button type="submit" class="btn m-2">Login</button>
+                <br>
+                <p style="font-size: 14px;">Don't have account <a href="{{url_for('registration')}}" class="text-decoration-none d-inline-block" style="color: #ff9d2d;">Register Now</a></p>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

@@ -51,7 +51,7 @@
 
             <a href="{{url_for('home')}}" class="logo"><img src="{{url_for('static',filename='assets/images/logo.svg')}}" alt=""></a>
 
-            <nav class="navbar" data-navbar>
+            <nav class="navbar" data-navbar id="data-navbar">
                 <ul class="navbar-list">
 
                     <li class="nav-item">
@@ -80,7 +80,7 @@
 
                 <a href="{{url_for('registration')}}"> <button class="btn btn-hover">Signup</button></a>
 
-                <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
+                <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn id="data-menu-toggle-btn">
           <span class="line top"></span>
           <span class="line middle"></span>
           <span class="line bottom"></span>
@@ -204,7 +204,7 @@
         <ion-icon name="chevron-up"></ion-icon>
     </a>
 
-
+    <script src="{{url_for('static',filename='assets/js/script.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- 
     - custom js link
